@@ -1,5 +1,5 @@
 const mongoose=require('mongoose');
-const postSchema=new monggose.Schema(
+const postSchema=new mongoose.Schema(
     {
         content:{
             type:String,
@@ -8,12 +8,12 @@ const postSchema=new monggose.Schema(
         user:
         {
             type : mongoose.Schema.Types.ObjectId,
-            ref:User
+            ref:'User'
         }
     },
     {
         timestamps: true
     }
 );
-mongoose.model('Post',postSchema);
+const Post=mongoose.model('Post',postSchema);
 module.exports=Post;

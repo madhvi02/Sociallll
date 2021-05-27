@@ -1,12 +1,28 @@
-
+<link rel="stylesheet" href="/css/home.css">
 <h1>
             Codeial / <%= title %>        
 </h1>
 
 <section>
-    <h4>Posts</h4>
-    <form action="" method="POST">
-        <textarea name="content" id="" cols="30" rows="3"></textarea>
+    <h2>Posts</h2>
+    <% if(locals.user){ %>
+    <form action="/post/create" method="POST">
+        <textarea name="content" id="" cols="30" rows="3"></textarea><br>
         <input type="submit" value="POST!!">
     </form>
+    <% } %>
+    <div id="posts-list" >
+        <ul>
+         <% for (post of posts) { %>
+             <li>
+                 <%= post.content %>
+                 <%= post.user.name %>
+             </li>
+         <% } %>
+        </ul> 
+     
+     </div>
+     
 </section>
+
+

@@ -1,0 +1,19 @@
+form {
+  text-align: center; }
+  form h2 {
+    margin-top: 5%;
+    font-family: sans-serif; }
+  form textarea {
+    margin-top: 5%;
+    font-size: 2rem;
+    border: 2px solid black; }
+  form input {
+    margin-top: 5%;
+    font-size: 1.5rem;
+    border: 2px solid black;
+    padding: 8px;
+    cursor: pointer; }
+
+section #posts-list ul {
+  font-weight: bolder;
+  font-size: 1.5rem; }
