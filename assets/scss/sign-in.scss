@@ -1,0 +1,19 @@
+form
+{
+    height: auto;
+    width:20%;
+    margin-left: 40%;;
+    display: flex;
+    flex-wrap: wrap;
+    
+    input
+    {
+        display: inline-block;
+        margin:20px;
+        width: 100%;
+        font-size: 1.5rem;
+        font-family: sans-serif;
+        
+    }
+    
+}

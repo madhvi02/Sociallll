@@ -1,0 +1,26 @@
+#header
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100vw;
+    height: 6%;
+    padding: 0.5rem;
+    background-color: blue;
+    #logo
+    {
+        font-weight: bolder;
+    }
+    div
+    {
+        padding: 10px;
+    }
+    div ,  a
+    {
+        color: white;
+        font-size: 2rem;;
+        text-decoration: none;;
+    }    
+    
+}
+

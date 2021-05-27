@@ -1,3 +1,27 @@
+<link rel="stylesheet" href="/css/header.css">
+
 <header>
-    Page Header
+
+    <div id="header">
+        <div id="logo">
+            <a href="/">Codeial</a>
+        </div>
+        <div id="login">
+            <% if(locals.user) { %>
+                <a href="/users/profile">Profile</a>
+                &nbsp;
+                <a href="/users/sign-out">Sign Out </a>
+            <% } else { %>
+                <a href="/users/sign-up">Sign-Up</a>
+                &nbsp;
+                <a href="/users/sign-in">Sign In </a>
+            <% } %>
+        </div>
+
+    </div>
+
+
+
+    
+
 </header>
