@@ -2,8 +2,8 @@
 <h1>
             Codeial / <%= title %>        
 </h1>
-
-<section>
+<div id="container">
+<section id="feedpost">
     <h2>Posts</h2>
     <% if(locals.user){ %>
     <form action="/post/create" method="POST">
@@ -14,10 +14,8 @@
     <div id="posts-list" >
         <ul>
          <% for (post of posts) { %>
-             <li>
-                 <%= post.content %>
-                 <%= post.user.name %>
-             </li>
+            <%- include('_post') -%>
+            
          <% } %>
         </ul> 
      
@@ -25,4 +23,16 @@
      
 </section>
 
+<section id="friends-list">
+    <span>FRIENDS</span> 
+    <% for (u of all_users) { %>
+        
+        <p>
+            <a href="/users/profile/<%= u.id %>"> 
+                <%= u.name %>
+            </a>
+        </p>
+    <% } %>
+</section>
+</div>
 

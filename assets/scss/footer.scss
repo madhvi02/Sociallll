@@ -2,11 +2,13 @@
 {
     width: 100vw;
     height: auto;
-    position: fixed;
-    bottom: 0;;
+    position: relative;
+    top:100vh;
+    //bottom: 0;;
     display: flex;
     justify-content: flex-start;
     background-color: grey;
+    z-index: -1;
     div
     {
         margin-top: 10px;

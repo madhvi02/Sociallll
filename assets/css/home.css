@@ -4,12 +4,12 @@ form {
     margin-top: 5%;
     font-family: sans-serif; }
   form textarea {
-    margin-top: 5%;
+    margin-top: 1%;
     font-size: 2rem;
     border: 2px solid black; }
   form input {
-    margin-top: 5%;
-    font-size: 1.5rem;
+    margin-top: 1%;
+    font-size: 1rem;
     border: 2px solid black;
     padding: 8px;
     cursor: pointer; }
@@ -17,3 +17,25 @@ form {
 section #posts-list ul {
   font-weight: bolder;
   font-size: 1.5rem; }
+
+#friends-list {
+  font-weight: bolder;
+  padding: 10px;
+  width: 30%;
+  height: 100vh;
+  border-left: 2px solid black; }
+  #friends-list span {
+    font-size: 2rem; }
+
+#feedpost h2 {
+  font-size: 2rem; }
+
+#feedpost ul {
+  list-style: none; }
+
+#container {
+  display: flex;
+  justify-content: space-between; }
+
+#comment {
+  color: darkblue; }

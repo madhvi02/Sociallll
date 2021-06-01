@@ -9,14 +9,14 @@ form
     }
     textarea
     {
-        margin-top: 5%;
+        margin-top: 1%;
         font-size: 2rem;
         border: 2px solid black;;
     }
     input
     {
-        margin-top: 5%;
-        font-size: 1.5rem;
+        margin-top: 1%;
+        font-size: 1rem;
         border: 2px solid black;;
         padding: 8px;;
         cursor: pointer;
@@ -33,3 +33,41 @@ section
         }
 
     }
+
+#friends-list
+{
+   
+    font-weight: bolder;
+    span
+    {
+        font-size: 2rem;
+    }
+    //margin-right: 10%;;
+    padding: 10px;;
+    width: 30%;
+    height: 100vh;;
+    border-left:2px solid black ;
+}
+#feedpost
+{
+    
+    h2
+    {
+        font-size: 2rem;;
+    }
+
+    ul
+    {
+        list-style: none;
+    }
+}
+#container
+{
+    display: flex;
+    justify-content: space-between;
+    
+}
+#comment
+{
+    color: darkblue;
+}

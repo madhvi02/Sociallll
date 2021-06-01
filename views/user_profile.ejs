@@ -3,12 +3,22 @@
             Codeial / Profile Page
 
         </h1>
+        <% if(locals.user.id==profile_user.id) { %>
+            <form method="POST" action="/users/update/<%= profile_user.id %>">
+                <input type="text" name="name" value="<%= profile_user.name %>" placeholder="Your Name" required>
+                <br>
+                <input type="email" name="email" value="<%= profile_user.email %>" placeholder="Your Email" required>
+                <br>
+                <input type="submit" value="update">
+            </form>
+
+        <% } %>
         <div>
-            <%= user.email %>
+            <%= profile_user.email %>
         </div>
 
         <div>
-            <%= user.name %>
+            <%= profile_user.name %>
         </div>
 
        

@@ -1,11 +1,12 @@
 #footer {
   width: 100vw;
   height: auto;
-  position: fixed;
-  bottom: 0;
+  position: relative;
+  top: 100vh;
   display: flex;
   justify-content: flex-start;
-  background-color: grey; }
+  background-color: grey;
+  z-index: -1; }
   #footer div {
     margin-top: 10px;
     color: white;
