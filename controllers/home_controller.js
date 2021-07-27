@@ -1,6 +1,6 @@
 const Post=require('../models/post');
 const User=require('../models/user');
-module.exports.home = function(req, res){
+module.exports.home = async function(req, res){
     // Post.find({},function(err,posts)
     // {
     //     return res.render('home', {
@@ -10,29 +10,31 @@ module.exports.home = function(req, res){
     // });
 
     //populate the user
-    Post.find({})
-    .populate('user')
-    .populate({
-            path:'comments',
-            populate:
-            {
-                path:'user'
-            }
-    })
-    .exec(function(err,posts)
-    {
-        User.find({},function(err,users)
-        {
-            return res.render('home', {
-                title: "Home Page",
-                all_users:users,
-                posts:posts
-            });
+
+    try{
+        let posts=await Post.find({})
+        .populate('user')
+        .populate({
+                path:'comments',
+                populate:
+                {
+                    path:'user'
+                }
         });
-       
-    });
-
-
+    
+        let users= await User.find({});
+        return res.render('home', {
+            title: "Home Page",
+            all_users:users,
+            posts:posts
+        });
+    
+    }
+    catch(err)
+    {
+        console.log('Error',err);
+    }
+    
 }
 
 // module.exports.actionName = function(req, res){}

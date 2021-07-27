@@ -8,7 +8,7 @@
         </div>
         <div id="login">
             <% if(locals.user) { %>
-                <a href="/users/profile">Profile</a>
+                <span><%= locals.user.name %></span>
                 &nbsp;
                 <a href="/users/sign-out">Sign Out </a>
             <% } else { %>

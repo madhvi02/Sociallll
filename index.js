@@ -5,13 +5,14 @@ const port = 8000;
 const expressLayouts = require('express-ejs-layouts');
 const db = require('./config/mongoose');
 const sassMiddleware=require('node-sass-middleware');
-
+const flash=require('connect-flash');
 // used for session cookie
 const session = require('express-session');
-
+const customFlash=require('./config/middleware');
 const passport = require('passport');
 const passportLocal = require('./config/passport-local-stratergy');
-
+const passportJWT=require('./config/passport-jwt');
+//const path=require('path');
 app.use(sassMiddleware(
     {
         src:'./assets/scss',
@@ -56,6 +57,11 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 app.use(passport.setAuthentication);
+
+app.use('/uploads',express.static(__dirname+'/uploads'));
+
+app.use(flash());
+app.use(customFlash.setFlash);
 // use express router
 app.use('/', require('./routes'));
 
