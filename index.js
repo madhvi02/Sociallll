@@ -12,6 +12,7 @@ const customFlash=require('./config/middleware');
 const passport = require('passport');
 const passportLocal = require('./config/passport-local-stratergy');
 const passportJWT=require('./config/passport-jwt');
+const passportGoogle = require('./config/passport-google-oauth2-strategy');
 //const path=require('path');
 app.use(sassMiddleware(
     {
